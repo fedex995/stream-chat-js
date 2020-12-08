@@ -713,6 +713,7 @@ export class StableWSConnection<
     this.isResolved = false;
     /** a promise that is resolved once ws.open is called */
     this.connectionOpen = new Promise<WebSocket.MessageEvent>(function (resolve, reject) {
+      //@ts-ignore
       that.resolvePromise = resolve;
       that.rejectPromise = reject;
     }).then(
