@@ -119,6 +119,7 @@ export class TokenManager<UserType extends UnknownType = UnknownType> {
     // eslint-disable-next-line no-async-promise-executor
     this.loadTokenPromise = new Promise(async (resolve) => {
       if (this.type === 'static') {
+        //@ts-ignore
         return resolve(this.token);
       }
 
