@@ -205,7 +205,7 @@ export class Channel<
         UserType
       >
     >(this._channelURL() + '/message', {
-      message,
+      message: { ...message, show_in_channel: true },
     });
 
     // Reset unreadCount to 0.
